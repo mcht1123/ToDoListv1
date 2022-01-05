@@ -25,12 +25,6 @@ app.get("/work", function(req,res){
     res.render("list",{kindOfDay: "Work List", newListItem: workItems});
 })
 
-app.post("/work",function(req,res){
-    let item = req.body.newItem
-    workItems.push(item);
-    res.redirect("/work");
-})
-
 app.post("/",function(req,res){
     let item = req.body.newItem;
 
